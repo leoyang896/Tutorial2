@@ -1,10 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>nz.ac.massey.cs.251</groupId>
-  <artifactId>Maven_Tutorial</artifactId>
-  <version>1.0.0</version>
-  <properties>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>nz.ac.massey.cs.251</groupId>
+    <artifactId>Maven_Tutorial</artifactId>
+    <version>1.0.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>32.1.2-jre</version>
+        </dependency>
+    </dependencies>
+    <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-  </properties>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <!-- Specify the main class here if it's always the same -->
+                    <!-- <mainClass>com.example.MainClass</mainClass> -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
